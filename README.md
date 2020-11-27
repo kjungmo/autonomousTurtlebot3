@@ -57,7 +57,7 @@ ssh 접속을 통해  리모트 PC가 터틀봇의 라즈베리 파이 보드에
 
 특징 : 본 프로젝트에서 카메라는 라이다의 앞부분(4층)에 위치해있다. Picamra브라켓의 각도가 90º 이지만, 차선과 표지판을 원활히 검출하기 위해 40º를 줄여서 지면으로부터 50º의 각도로 장착하였다. 기존 90º 에 비해 인식범위의 사각지대가 줄어든 것을 확인 했다.
 
-2.png 삽입해야햄
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/2.png)
 
 
 Raspberry pi 3 Model B
@@ -106,7 +106,7 @@ python 내에서는 rospy 모듈을 통해 .py 파일과의 연결점이 생성�
 
 2-4. 트랙 구성
 
-3.png
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/3.png)
 
 트랙의 구성은 좌측 황색, 우측 백색의 두 차선으로 구성되어 있으며, 트랙이 계속 이어지는 순환형 형태를 띄고 있다.
 긴 직진구간, 코너구간, 짧은 직진구간의 형태를 띄고 있으며 차선 2cm 차선 폭 7cm으로균일한 너비의 트랙이다.
@@ -116,20 +116,20 @@ python 내에서는 rospy 모듈을 통해 .py 파일과의 연결점이 생성�
 
 3-1. 차선 검출 방법
 
-4.png
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/4.png)
 
 HSV 색 공간으로 변환된 이미지에 대해 트랙 차선이 들어오도록 ROI영역을 설정하고 mask를 씌워 이진화
 
 mask는 yellow lane / white lane을 각각 검출하기 위하여 2가지 사용
 
-5.png
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/5.png)
 
 ROI영역 안에 라인이 검출된다면 흰색으로 표시되고,
 영역 안에 라인이 검출되지 않는다면 검은색으로 표시된다.
 
 이는 openCV의 createLineSegmentDetect()라는 모듈을 통해서 Contour 검출을 하게 된다. 따라서 ROI 영역 안에 이진화된 차선이 검출되면 Contour가 카운팅 되고, 이를 통해 조건문에서 각 조건에 따른 코드를 실행시킨다.
 
-6.png
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/6.png)
 
 
 3-2. 모터제어와 주행
@@ -153,7 +153,7 @@ angular.z값이 + 값일 때 왼쪽으로 회전하고 – 값일 때 오른쪽�
 주행은 3-1에서 검출한 차선의 contour 유.무에 의해 결정된다.
 
 
-7.png
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/7.png)
 
 
 
@@ -164,7 +164,7 @@ angular.z값이 + 값일 때 왼쪽으로 회전하고 – 값일 때 오른쪽�
 
 4-1. 데이터 수집 및 분석
 
-8.png
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/8.png)
 
 실제 주행 중 Pi카메라를 통해 1분13초동안 60fps로 촬영해서 데이터 4068장을 수집했다. 이 중 확실한 corner, straight, stop sign detection에 대해서 각각 500장으로 개수가 줄었다. 그 후 데이터 증강을 통해 총 데이터 수를 45000장으로 증가시켰다.
 
@@ -179,11 +179,11 @@ angular.z값이 + 값일 때 왼쪽으로 회전하고 – 값일 때 오른쪽�
 
 CNN 모델의 경우에 레이어를 늘려가며 정확도를 비교했다. 레이어의 개수가 1, 2, 3, 4일때, 모델 로드 후 예측까지 걸리는 시간은 0.22초 정도로 모두 비슷했지만, 레이어 수가 4개일 때 정확도가 99.54%로 가장 높았기 때문에 4개짜리 레이어 모델을 채택했다.
 
-9.png
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/9.png)
 
 결과적으로 다음과 같은 모델을 구현하였다.
 
-10.png
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/10.png)
 
 4-3 프로세스
 
