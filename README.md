@@ -153,7 +153,7 @@ angular.z값이 + 값일 때 왼쪽으로 회전하고 – 값일 때 오른쪽�
 주행은 3-1에서 검출한 차선의 contour 유.무에 의해 결정된다.
 
 
-![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/7.png)
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/7.jpg)
 
 
 
