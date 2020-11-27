@@ -219,7 +219,7 @@ CNN 모델의 경우에 레이어를 늘려가며 정확도를 비교했다. 레
 
 ![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/classification.gif)
 
-## 6장.한계점 및 향후계획
+## 6장. 한계점 및 향후계획
 
 프로젝트 초기 기능구현 계획은 한 번에 두 기능 실행을 목표로 하였다. 
 먼저 알고리즘을 이용하여 라인을 인식해 차선 내 자율주행하는 것이었다.
