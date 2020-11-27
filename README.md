@@ -182,7 +182,8 @@ angular.z값이 + 값일 때 왼쪽으로 회전하고 – 값일 때 오른쪽�
 
 
 ![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/7.jpg)
-
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/lane_drive.gif)
+![image](https://github.com/kjungmo/autonomousTurtlebot3/blob/main/find_lane.gif)
 
 
 
