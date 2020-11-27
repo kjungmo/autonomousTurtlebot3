@@ -7,6 +7,8 @@
 다만 광각카메라, 라이더 및 초음파 센서가 없어 단일 Pi Camera 및 라즈베리 파이 3 B+ 로 간소하게 진행했다.  
 하지만 주목해야할 점은 메타 운영체제인 ROS를 사용하고, 지급받은 라즈베리 파이 3 B+의 낮은 컴퓨팅파워로도 두 가지 기능(차선 내 주행 및 이미지 인식)을 수행했다는 점이다. 이는 하드웨어 업그레이드를 통한 기술 정교화의 토대를 마련했다는 점에서 해당 프로젝트에 의미가 있다. 
 
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/FM1ypxo4akU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 1-1 배경
 
